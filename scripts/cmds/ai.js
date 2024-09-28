@@ -1,10 +1,10 @@
 const axios = require('axios');
 const UPoLPrefix = [
-  '-ai',
+  'kora',
   'ai',
-  '/ai',
+  'sule',
   'bot',
-  'ask'
+  
 ]; 
 
   module.exports = {
@@ -13,8 +13,8 @@ const UPoLPrefix = [
     version: '1.2.1',
     role: 0,
     category: 'AI',
-    author: 'Raphael scholar',
-    shortDescription: '',
+    author: 'Sman',
+    shortDescription: 'Get response from kora',
     longDescription: '',
   },
   
@@ -28,11 +28,11 @@ const UPoLPrefix = [
       
      const upol = event.body.substring(ahprefix.length).trim();
    if (!upol) {
-        await message.reply('Enter a question.? 🥹');
+        await message.reply('Hey buddy! How Can i help you Today 😎');
         return;
       }
       
-      const apply = ['Awww🥹, maybe you need my help', 'How can i help you?', 'How can i assist you today?', 'How can i help you?🙂'];
+      const apply = ['Hey! Kora is here to help', 'How can i help you today?', 'How can kora assist you today?', '👌'];
       
      const randomapply = apply[Math.floor(Math.random() * apply.length)];
 
@@ -44,9 +44,9 @@ const UPoLPrefix = [
       
     const encodedPrompt = encodeURIComponent(args.join(" "));
 
-   await message.reply('thinking..');
+   await message.reply('Kora Thinking ⏳');
   
-    const response = await axios.get(`https://sandipbaruwal.onrender.com/gemini?prompt=${encodedPrompt}`);
+    const response = await axios.get(`https://kora-ai.onrender.com/koraai?query=${encodedPrompt}`);
  
      const UPoL = response.data.answer; 
 
