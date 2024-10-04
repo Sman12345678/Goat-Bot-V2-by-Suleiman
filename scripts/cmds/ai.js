@@ -1,7 +1,7 @@
 const axios = require('axios');
 const UPoLPrefix = [
   'kora',
-  'ai',
+  'ask',
   'sule',
   'bot',
   
