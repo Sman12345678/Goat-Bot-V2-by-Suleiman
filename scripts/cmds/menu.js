@@ -1,9 +1,9 @@
-const fs = require("fs-extra");
+ const fs = require("fs-extra");
 const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "【 https://www.facebook.com/profile.php?id=61553871285563】";
+const doNotDelete = "【 https://www.facebook.com/profile.php?id=61553565805276】";
 
 const authorName = "Raphael Ilom";
 const authorRights = { name: authorName, canBeChanged: false };
@@ -37,7 +37,7 @@ module.exports = {
       help: "╭───────────⦿ SPARKI PERFECT MENU ⦿───────────╮\n%1\n├───────────⦿ PAGE INFO ⦿───────────┤\n│ Page: [ %2/%3 ] | Total Commands: %4\n│ Prefix: %5\n├───────────⦿ USAGE INFO ⦿───────────┤\n│ Type: %5help <page> - View commands\n│ Type: %5help <cmd> - View details\n│ Type: %5help category - View categories\n│ Type: %5help search <keyword> - Search\n│ Type: %5help stats - View statistics\n│ Type: %5help update - Check for updates\n╰───────────⦿ %6 ⦿───────────╯",
       commandNotFound: "Command \"%1\" does not exist. Use %2help to see all commands.",
       getInfoCommand: "╭────⦿ COMMAND: %1 ⦿────╮\n│ Description: %2\n│ Aliases: %3\n│ Group Aliases: %4\n│ Version: %5\n│ Role: %6\n│ Cooldown: %7s\n│ Author: %8\n│ Category: %9\n├────⦿ USAGE ⦿────┤\n%10\n╰────⦿ END ⦿────╯",
-      categoryList: "╭───────⦿ SPARKI PERFECT CATEGORIES ⦿───────╮\n%1\n╰───────⦿ TOTAL: %2 ⦿───────╯",
+      categoryList: "╭───────⦿ KORA  CATEGORIES ⦿───────╮\n%1\n╰───────⦿ TOTAL: %2 ⦿───────╯",
       searchResults: "╭───────⦿ SEARCH RESULTS ⦿───────╮\n%1\n╰───────⦿ FOUND: %2 ⦿───────╯",
       statsMessage: "╭───────⦿ COMMAND STATISTICS ⦿───────╮\n%1\n╰───────⦿ TOTAL USES: %2 ⦿───────╯",
       updateMessage: "Current version: %1\nLatest version: %2\n%3",
@@ -110,7 +110,7 @@ module.exports = {
 
     const helpMessage = getLang("help", commandDisplay, page, totalPage, commands.size, prefix, doNotDelete);
 
-    const imageUrl = "https://tiny.one/yckvxnw8";
+    const imageUrl = "https://i.imgur.com/Suk7u4N.jpeg";
     
     message.reply({
       body: helpMessage,
