@@ -1,4 +1,4 @@
-const os = require('os');
+ const os = require('os');
 const process = require('process');
 const axios = require('axios');
 const crypto = require('crypto');
@@ -52,7 +52,7 @@ module.exports = {
                     responseMessage = "Invalid option. Use 'basic', 'system', 'stats', or 'all'.";
             }
 
-            const gokuUrl = "https://tiny.one/vsecm9d7";
+            const gokuUrl = "https://i.imgur.com/nk49co8.jpeg";
             const gokuImage = await global.utils.getStreamFromURL(gokuUrl);
             
             await api.sendMessage(
@@ -91,12 +91,12 @@ async function getSystemInfo(colors) {
     const diskSpace = await getDiskSpace();
     
     return `${colors.highlight}📊 System Information:${colors.text}\n` +
-           `${colors.subheading}🖥️ Platform:${colors.text} ${os.platform()}\n` +
+           `${colors.subheading}🖥 Platform:${colors.text} ${os.platform()}\n` +
            `${colors.subheading}💻 OS:${colors.text} ${os.type()} ${os.release()}\n` +
            `${colors.subheading}🧠 Memory:${colors.text} ${formatBytes(usedMem)}/${formatBytes(totalMem)} (${(usedMem / totalMem * 100).toFixed(2)}%)\n` +
            `${colors.subheading}💽 Disk:${colors.text} ${formatBytes(diskSpace.used)}/${formatBytes(diskSpace.total)} (${diskSpace.usedPercentage}%)\n` +
            `${colors.subheading}⚡ CPU:${colors.text} ${cpuUsage.toFixed(2)}% | ${os.cpus().length} cores\n` +
-           `${colors.subheading}🌡️ Temp:${colors.text} ${await getCPUTemperature()}°C`;
+           `${colors.subheading}🌡 Temp:${colors.text} ${await getCPUTemperature()}°C`;
 }
 
 async function getBotStats(threadsData, usersData, colors) {
@@ -120,7 +120,7 @@ async function getAdditionalInfo(colors) {
         const weatherData = await getWeatherData(data.ip);
         const quote = await getRandomQuote();
         return `${colors.highlight}🌐 Additional Info:${colors.text}\n` +
-               `${colors.subheading}🌡️ Weather:${colors.text} ${weatherData.temp}°C, ${weatherData.description} in ${weatherData.city}\n` +
+               `${colors.subheading}🌡 Weather:${colors.text} ${weatherData.temp}°C, ${weatherData.description} in ${weatherData.city}\n` +
                `${colors.subheading}💡 Quote:${colors.text} "${quote.content}" - ${quote.author}\n` +
                `${colors.subheading}🔗 Public IP:${colors.text} ${data.ip}`;
     } catch (error) {
@@ -262,7 +262,7 @@ function getThemeColors(theme) {
     const themes = {
         default: { highlight: '🔵', subheading: '🔹', text: '' },
         dark: { highlight: '⚪', subheading: '🔘', text: '' },
-        light: { highlight: '⚫', subheading: '◼️', text: '' },
+        light: { highlight: '⚫', subheading: '◼', text: '' },
         custom: { highlight: '🟣', subheading: '🟡', text: '' }
     };
     return themes[theme] || themes.default;
