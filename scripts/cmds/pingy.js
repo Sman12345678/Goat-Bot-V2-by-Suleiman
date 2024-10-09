@@ -30,7 +30,7 @@ module.exports = {
     const memory = process.memoryUsage();
     const cpuUsage = process.cpuUsage();
 
-    const gokuImageUrl = "https://tiny.one/yv83dua4";
+    const gokuImageUrl = "https://i.imgur.com/Suk7u4N.jpeg";
     const imagePath = path.join(__dirname, "goku-image.jpg");
 
     try {
