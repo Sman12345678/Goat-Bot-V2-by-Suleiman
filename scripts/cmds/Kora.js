@@ -54,7 +54,7 @@ module.exports = {
       await message.reply('Kora is thinking ⏳');
 
       // API request in a try-catch block to handle potential errors
-      const response = await axios.get(`https://kora-ai.onrender.com/koraai?query=${encodedPrompt}`);
+      const response = await axios.get(`https://sman-api-2v8g.onrender.com/koraai?query=${encodedPrompt}`);
 
       // Check for possible structures of the Flask API response
       if (response.data) {
