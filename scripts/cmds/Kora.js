@@ -13,9 +13,9 @@ module.exports = {
     version: '1.2.1',
     role: 0,
     category: 'AI',
-    author: 'Sman',
+    author: 'Suleiman',
     shortDescription: 'Get response from Kora',
-    longDescription: '',
+    longDescription: 'Get interactive response from Kora ai',
   },
 
   onStart: async function () {},
@@ -54,7 +54,7 @@ module.exports = {
       await message.reply('Kora is thinking ⏳');
 
       // API request in a try-catch block to handle potential errors
-      const response = await axios.get(`https://sman-api-2v8g.onrender.com/koraai?query=${encodedPrompt}`);
+      const response = await axios.get(`https://sman-api-2v8g.onrender.com/process?query=${encodedPrompt}`);
 
       // Check for possible structures of the Flask API response
       if (response.data) {
